@@ -8,6 +8,7 @@ def calculate_mean(data):
     if not data:
         return 0
     return sum(data) / len(data)
+    
 
 def calculate_median(data):
     """Calculate the median of data"""
@@ -22,6 +23,7 @@ def calculate_median(data):
         return (sorted_data[mid - 1] + sorted_data[mid]) / 2
     else:
         return sorted_data[mid]
+        
 
 def calculate_std(data):
     """Calculate standard deviation of data"""
@@ -31,6 +33,7 @@ def calculate_std(data):
     mean = calculate_mean(data)
     variance = sum((x - mean) ** 2 for x in data) / len(data)
     return variance ** 0.5
+    
 
 def summarize_data(data):
     """Return dictionary of all statistics"""
